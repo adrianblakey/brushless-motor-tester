@@ -4,7 +4,7 @@ There's a need for a brushless motor tester. Since our focus and interest is slo
 
 If you are keeping abreast of the subject you'll be aware there are some solutions out there already, notably:
 
-  - [The Latvian K,sub>v</sub> Tester](https://www.latslot.lv/products/kv-meter)   
+  - [The Latvian K<sub>v</sub> Tester](https://www.latslot.lv/products/kv-meter)   
   - [The AEO K<sub>v</sub> Meter](https://www.ebay.co.uk/itm/154220029114)  
   - [Things on AliExpress](https://www.aliexpress.com/item/1005008982133782.html)  
   - do-slot?  
