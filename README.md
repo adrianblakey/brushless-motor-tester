@@ -29,7 +29,7 @@ However it's just a collection of parts and will need some effort to design a fi
   - Connections.  
   - etc.  
 
-The starting point would be a requirements document to focus the effort so we know what we are building. Given the requirements document we could divide up the effort to people with skills to do the CAD design of the parts and circuit boards (if any), and the programming etc.
+The starting point is a [requirements document](https://github.com/adrianblakey/brushless-motor-tester/blob/main/docs/brushless%20motor%20tester%20requirements.ods) which is now available for review. This shall focus the effort so we know what we are building. Given the requirements document we could divide up the effort to people with skills to do the CAD design of the parts and circuit boards (if any), and the programming etc.
 
 This would all be open source so that anyone could make one of these for themselves and there'll be the opportunity for anyone to commericalize this as long as they agree to make a contribution back to the project.
 
