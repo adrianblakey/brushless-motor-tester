@@ -1,32 +1,37 @@
 -2,Priority,Name,Description,Notes
 -1,High,Organization,The project shall be open source. All artifacts shall be publicly available.,
 0,High,Organization,There shall be a commercial model that shall return value to the project’s participants.,
-1,High,Packaging,Shall be attractively and robustly packaged in a fixture.,"Assume a 3D printed enclosure that containes the parts, exposes the connectors and mounted the motor etc."
+1,High,Packaging,Shall be attractively and robustly packaged in a fixture.,"Assume a 3D printed enclosure that contains the parts, exposes the connectors and mounted the motor etc."
 2,High,Packaging,There shall be a way to firmly attach a motor to the tester while it is being tested.,Assume the motor might have a synthetic load attached – like a flywheel or propeller.
-3,High,Packaging,There shall be a way to enclose the motor under test so that in case it malfunctions or is accidentally overdriven the tester shall not be harmed.,
+3,High,Packaging,There shall be a way to enclose the motor under test so that in case it malfunctions or is accidentally overdriven the tester shall not be harmed.,“the tester” is the person running the device.
 4,High,Connectors,The tester shall have input voltage connections by which to connect a DC voltage.,
 5,High,Connectors,Shall have output connections for U/V/W motor phases.,
 6,High,Connectors,Connectors shall be properly and appropriately sized for mechanical and electrical loads.,
 7,High,Connectors,Shall permit a slot car controller to be plugged in using standard banana plugs.,
-8,High,Power,Shall be externally powered from a bench power supply capable of providing power similar to that available at most tracks.,"Range: 0-18V, 0-30A"
+8,High,Power,Shall be externally powered from a bench power supply capable of providing power similar to that available at most tracks.,"Range: 0-18V, 0-40A"
 9,High,Power,"Shall be optionally capable of sinking return, braking power.",Range: 0-20A
-10,High,Measurement,Shall measure motor speed (Ke).,Optical or hall effect or both. Hall effect is affected by (non)ferrous motor rotor (bell) materials. Note: Kv is the output voltage when the shaft is rotated.
+10,High,Measurement,Shall measure motor speed (Kv).,"Optical or hall effect or both. Hall effect is affected by (non)ferrous motor rotor (bell) materials. Note: Technically, Kv is the output voltage when the shaft is rotated.
+
+Kv is defined as the velocity constant in rpm/V. Ke is the back emf constant. In SI units is V/(rad/s) or in hobby units V/rpm. It is is an inverse measure of Kv"
 11,High,Measurement,Shall NOT measure Kv.,Kv is the back emf voltage produced when the motor shaft it rotated. The tester shall not have a capability to rotate the shaft and measure the resulting Kv.
-12,High,Measurement,Shall measure input voltage.,
-13,High,Measurement,Shall measure input current. ,
-14,High,Measurement,Shall measure motor input current.,
-15,High,Measurement,Shall measure motor braking current.,
-16,High,Measurement,Shall measure motor voltage.,
-17,High,Measurement,Shall measure eRPM.,The eCom commutation rpm.
+12,High,Measurement,Shall measure input voltage.,This capability might best be provided by using an external instrument and not incorporating it into the device itself.
+13,High,Measurement,Shall measure input current. ,Ditto
+14,High,Measurement,Shall measure motor input current.,Ditto
+15,High,Measurement,Shall measure motor braking current.,Ditto
+16,High,Measurement,Shall measure motor voltage.,Ditto
+17,High,Measurement,Shall measure eRPM.,The eCom commutation rpm. Available from the Remora WiFi link.
 18,Medium,Measurement,Shall measure motor phases resistances.,
 19,Medium,Measurement,Shall measure motor phases inductances.,
 20,High,Measurement,Shall be able to measure a loaded motor.,"Using a flywheel, propeller, fluid drag ..."
-21,High,Measurement,"Shall measure motors in the range 1,000Kv to 28,000Kv",Note: the upper limit may extend based on motot innovations.
+21,High,Measurement,"Shall measure motors in the range 1,000Kv to 28,000Kv",Note: the upper limit may extend based on motor innovations.
 22,High,Measurement,Shall be able to know motor poles.,Needs to be input to the device.
 23,High,Measurement,"Shall be able to test 6, 8, 12 magnet motors.","3, 4, 6 pole pairs."
 24,Low,Measurement,Shall measure motor weight.,External capability.
 25,Low,Measurement,Shall measure motor rotational mass.,External capability.
-26,Medium,Measurement,Shall measure motor thermal emissions.,Might require an add-on.
+26,Medium,Measurement,Shall measure motor thermal emissions.,"To measure the stator winding, it might be necessary to bond a thermocouple which would mean opening the motor to insert it, and a thermocouple meter. Perhpas an IR thermometer can “see” the winding, if it can be positioned close enough, and it might need to have adjustable emissivity settings. See: 
+https://cpc.farnell.com/duratool/d03129/digital-thermometer/dp/IN07449
+https://cpc.farnell.com/unbranded/tk-610b/thermometer-k-type/dp/IN05147
+https://cpc.farnell.com/duratool/d03055/thermometer-infrared/dp/IN07344?st=3055%20bk001"
 27,High,Measurement,Shall operate with input voltages between 1V and 18V.,
 28,High,Measurement,Shall have a capability to limit the maximum input voltage.,
 29,High,Measurement,Shall have the capability to limit the maximum input current.,
@@ -34,8 +39,8 @@
 31,Low,Measurement,Shall measure motor shaft accuracy.,External capability.
 32,High,Parts,Shall contain a standard eCom.,Probably the Remora – obvious reasons.
 33,Medium,Parts,Shall support alternative eComs.,If they can support other required capabilities.
-34,High,Dyno,Shall be able to operate in “dyno mode” to enable eCom parameter tuning to optimize motor performance.,Would probably require a Remora.
-35,High,Profiles,Shall be able to setup and run test profiles.,"The motor shall be run for a specific time at a specific voltage while values are captured, before increasing the voltage in multiple steps. Means it’ll need an mcu – Pi Pico?"
+34,Low,Tuning,Shall be able to tune Remora eCom parameter settings to optimize motor performance.,Might be out of scope. Might be best done with a controllable power supply and scope.
+35,High,Profiles,Shall be able to setup and run test profiles.,"The motor shall be run for a specific time at a specific voltage while values are captured, before increasing the voltage in multiple steps. Means it’ll need an mcu with DAC output – Pi Pico?"
 36,High,Display,Shall show realtime test information.,Probably need some sort of attached display.
 37,High,Profiles,Shall be able to persistently save the results of a test.,
 38,High,Profiles,Shall be able to label a test to associate it with a specific motor.,
