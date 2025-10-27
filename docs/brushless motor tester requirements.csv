@@ -1,10 +1,11 @@
 -2,Priority,Name,Description,Notes
--1,High,Organization,The project shall be open source. All artifacts shall be publicly available.,
+-1,High,Organization,The project shall be open source. All artifacts shall be publicly available.,Which OS license?
 0,High,Organization,There shall be a commercial model that shall return value to the project’s participants.,
 1,High,Packaging,Shall be attractively and robustly packaged in a fixture.,"Assume a 3D printed enclosure that contains the parts, exposes the connectors and mounted the motor etc."
 2,High,Packaging,There shall be a way to firmly attach a motor to the tester while it is being tested.,Assume the motor might have a synthetic load attached – like a flywheel or propeller.
 3,High,Packaging,There shall be a way to enclose the motor under test so that in case it malfunctions or is accidentally overdriven the tester shall not be harmed.,“the tester” is the person running the device.
 4,High,Connectors,The tester shall have input voltage connections by which to connect a DC voltage.,
+,Medium,Power,The input voltage source shall be able to provide a series of fixed steps of input voltages.,"Need to provide a start voltage say 2.4V, a low voltage – say 5.5V a high/medium voltage say 10V and a maximum voltage say 12.4V"
 5,High,Connectors,Shall have output connections for U/V/W motor phases.,
 6,High,Connectors,Connectors shall be properly and appropriately sized for mechanical and electrical loads.,
 7,High,Connectors,Shall permit a slot car controller to be plugged in using standard banana plugs.,
@@ -35,7 +36,7 @@ https://cpc.farnell.com/duratool/d03055/thermometer-infrared/dp/IN07344?st=3055%
 27,High,Measurement,Shall operate with input voltages between 1V and 18V.,
 28,High,Measurement,Shall have a capability to limit the maximum input voltage.,
 29,High,Measurement,Shall have the capability to limit the maximum input current.,
-30,Low,Measurement,Shall measure  motor balance.,External capability.
+30,Low,Measurement,Shall measure motor balance.,External capability or perhaps accelerometer on the testing fixture.
 31,Low,Measurement,Shall measure motor shaft accuracy.,External capability.
 32,High,Parts,Shall contain a standard eCom.,Probably the Remora – obvious reasons.
 33,Medium,Parts,Shall support alternative eComs.,If they can support other required capabilities.
